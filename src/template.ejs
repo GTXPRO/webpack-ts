@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TypeScript</title>
+		<% if(htmlWebpackPlugin.files.css){ (htmlWebpackPlugin.files.css).forEach( function(css){ %><link rel="stylesheet" href="<%= css %>" /><% }) } %>
+	</head>
+	<body>
+		<div id="root"></div>
+		<% (htmlWebpackPlugin.files.js).forEach( function(item, idx){ %><script src="<%= item %>"></script><% }) %>
+	</body>
+</html>

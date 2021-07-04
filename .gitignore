@@ -102,3 +102,24 @@ dist
 
 # TernJS port file
 .tern-port
+
+node_modules/
+dist/*
+/dist/
+/yarn-error.log
+build.html
+/.settings/
+.settings/*
+/.vscode/
+dev/*
+/dev/
+devserver.js
+/build.html
+.project
+package-lock.json
+yarn-error.log
+.idea/
+/.idea/*
+yarn.log
+yarn.lock
+/.vscode
