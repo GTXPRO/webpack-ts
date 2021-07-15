@@ -20,6 +20,7 @@ module.exports = merge(common, {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].[chunkhash].js',
+		assetModuleFilename: 'images/[hash][ext][query]'
 		// publicPath: "",
 	},
 
@@ -27,41 +28,12 @@ module.exports = merge(common, {
 		rules: [
 			{
 				test: /\.(sa|sc|c)ss$/,
-				use: ['style-loader', {
+				use: [{
 					loader: MiniCssExtractPlugin.loader,
 					options: {
 						esModule: false
 					},
 				}, 'css-loader', 'sass-loader']
-			},
-			{
-				test: /\.(jpeg|jpg|gif|png|PNG|ico|ogg)$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						name: nameFile
-					}
-				}]
-			},
-			{
-				test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						name: nameFile
-					}
-				}]
-			},
-			{
-				test: /\.svg/,
-				use: [{
-					loader: 'url-loader',
-					options: {
-						mimetype: 'image/svg+xml',
-						limit: 10000,
-						name: nameFile
-					}
-				}]
 			}
 		],
 	},
@@ -92,7 +64,6 @@ module.exports = merge(common, {
 					compress: {},
 					mangle: true, // Note `mangle.properties` is `false` by default.
 					module: false,
-					output: null,
 					toplevel: false,
 					nameCache: null,
 					ie8: false,

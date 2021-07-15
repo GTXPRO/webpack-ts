@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 const common = require("./webpack.common.js");
 
@@ -10,19 +11,14 @@ module.exports = merge(common, {
 	module: {
 		rules: [
 			{
+				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+				type: 'asset/inline',
+			},
+			{
 				test: /\.(sa|sc|c)ss$/,
 				use: [
 					'style-loader',
-					{
-						loader: 'css-loader',
-						options: {
-							modules: {
-								// localIdentName: '[sha1:hash:hex:4]',
-								localIdentName: '[path][name]__[local]--[hash:base64:5]'
-							},
-							importLoaders: 1
-						}
-					},
+					'css-loader',
 					'sass-loader'
 				],
 			},

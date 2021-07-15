@@ -29,34 +29,11 @@ module.exports = {
 			},
 			{
 				test: /\.(jpe?g|gif|png|PNG|ico|ogg)$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						name: '[path][name].[ext]',
-						emitFile: false,
-					},
-				}],
+				type: 'asset/resource'
 			},
 			{
-				test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						name: '[path][name].[ext]',
-						emitFile: false,
-					},
-				}],
-			},
-			{
-				test: /\.svg/,
-				use: [{
-					loader: 'url-loader',
-					options: {
-						limit: 10000,
-						emitFile: false,
-						mimetype: 'image/svg+xml'
-					}
-				}]
+				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+				type: 'asset/inline',
 			},
 			{ test: /\.ejs$/, use: [{ loader: 'ejs-loader', options: { esModule: false }}] },
 		],
