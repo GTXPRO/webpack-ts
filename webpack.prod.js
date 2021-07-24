@@ -19,8 +19,8 @@ module.exports = merge(common, {
 
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].[chunkhash].js',
-		assetModuleFilename: 'images/[hash][ext][query]'
+		filename: '[name].[contenthash:7].js',
+		assetModuleFilename: 'images/[hash:7][ext][query]'
 		// publicPath: "",
 	},
 
@@ -47,7 +47,7 @@ module.exports = merge(common, {
 			filename: '../build.html',
 			minify: false,
 		}),
-		new MiniCssExtractPlugin({ filename: 'styles.[chunkhash].css' }), //Build ra file bundle css
+		new MiniCssExtractPlugin({ filename: 'styles.[contenthash:7].css' }), //Build ra file bundle css
 		new WebpackManifestPlugin({ publicPath: "" }),
 		// new WebpackBar({ name: 'Webpack Production Running ', color: '#10519f' }),
 	],
