@@ -6,7 +6,6 @@ pipeline {
         sh 'rm -rf ./node_modules'
         sh 'df -h'
         sh 'pwd'
-        sh 'ls -lsa'
       }
     }
     stage('Install dependencies') {
@@ -28,6 +27,7 @@ pipeline {
       steps {
           sh 'uptime'
           sh 'cat ./dist/manifest.json'
+          echo currentBuild.result
       }
     }
   }
