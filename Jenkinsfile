@@ -27,7 +27,7 @@ pipeline {
       steps {
           sh 'uptime'
           sh 'cat ./dist/manifest.json'
-          echo currentBuild.result
+          echo 'Done Perfect!!!'
       }
     }
   }
