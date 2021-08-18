@@ -27,6 +27,7 @@ pipeline {
       }
       steps {
           sh 'uptime'
+          sh 'cat ./dist/manifest.json'
       }
     }
   }
