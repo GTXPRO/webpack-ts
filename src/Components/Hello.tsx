@@ -7,19 +7,18 @@
  * Change Log: <press Ctrl + alt + c write changelog>
  */
 
-
 import React, { FC } from 'react';
 
 interface HelloProps {
-	name?: string,
-	age: number,
-};
+  name?: string;
+  age: number;
+}
 
 const Hello: FC<HelloProps> = ({ name, age }) => (
-	<div>
-		Name: {name} <br />
-		Age: {age}
-	</div>
+  <div>
+    Name: {name} <br />
+    Age: {age}
+  </div>
 );
 
 export default Hello;

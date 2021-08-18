@@ -1,0 +1,13 @@
+.magic-box {
+	$width: 400px;
+	width: $width;
+	height: $width - 150;
+
+	border: 1px solid gray;
+	text-align: center;
+
+	&__text {
+		font-size: 30px;
+		color: white;
+	}
+}

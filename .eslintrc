@@ -1,0 +1,170 @@
+{
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"prettier"
+	],
+	"plugins": [
+		"@typescript-eslint", "react"
+	],
+	// "parser": "babel-eslint",
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 7,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true,
+			"modules": true,
+			"experimentalObjectRestSpread": true,
+			"allowImportExportEverywhere": true,
+			"legacyDecorators": true
+		}
+	},
+	"globals": {
+		"Promise": "off",
+		"JSX":true
+	},
+	"rules": {
+		"quotes": [
+			1,
+			"single"
+		],
+		"space-before-blocks": 0,
+		"no-unused-vars": [
+			1,
+			{
+				"vars": "all",
+				"args": "all"
+			}
+		],
+		"no-console": [
+			1,
+			{
+				"allow": [
+					"log"
+				]
+			}
+		],
+		"no-cond-assign": 1,
+		"no-constant-condition": 1,
+		"array-bracket-newline": 2,
+		"block-spacing": "error",
+		"brace-style": 1,
+		"camelcase": [
+			0,
+			{
+				"ignoreDestructuring": false,
+				"properties": "never",
+				"allow": [
+					"^UNSAFE_"
+				]
+			}
+		],
+		"computed-property-spacing": 1,
+		"consistent-this": 2,
+		"eol-last": 2,
+		"func-call-spacing": 2,
+		"implicit-arrow-linebreak": 2,
+		"indent": [
+			2,
+			2,
+			{
+				"SwitchCase": 1,
+				"ignoredNodes": [
+					"TemplateLiteral"
+				]
+			}
+		],
+		"jsx-quotes": [
+			"error",
+			"prefer-double"
+		],
+		"key-spacing": [
+			2,
+			{
+				"beforeColon": false,
+				"afterColon": true
+			}
+		],
+		"linebreak-style": [
+			2,
+			"windows"
+		],
+		"lines-around-comment": [
+			2,
+			{
+				"beforeBlockComment": true,
+				"beforeLineComment": true,
+				"allowBlockStart": true,
+				"allowClassStart": true
+			}
+		],
+		"lines-between-class-members": [
+			2,
+			"always"
+		],
+		"max-len": [
+			"error",
+			{
+				"code": 200,
+				"comments": 65
+			}
+		],
+		"max-lines": [
+			2,
+			{
+				"max": 1000
+			}
+		],
+		"max-lines-per-function": [
+			2,
+			{
+				"max": 600
+			}
+		],
+		"semi": [
+			2,
+			"always"
+		],
+		"semi-spacing": 2,
+		"semi-style": [
+			2,
+			"last"
+		],
+		"no-undef": 2,
+		"multiline-comment-style": [
+			1,
+			"separate-lines"
+		],
+		"no-use-before-define": 0,
+		"no-multi-spaces": [
+			2,
+			{
+				"ignoreEOLComments": false
+			}
+		],
+		"react/self-closing-comp": [
+			"error",
+			{
+				"component": true,
+				"html": true
+			}
+		],
+		"react/style-prop-object": 2,
+		"react/prop-types": 0,
+		"react/no-string-refs": 0,
+		"arrow-parens": [
+			2,
+			"as-needed"
+		],
+		"template-curly-spacing": "off",
+		"react/display-name": "off"
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	}
+}

@@ -7,18 +7,17 @@
  * Change Log: <press Ctrl + alt + c write changelog>
  */
 
-
 import React, { FC } from 'react';
 
 interface ColorProps {
-	style: { color: string, fontSize: number }
-	onClick: () => void,
-};
+  style: { color: string; fontSize: number };
+  onClick: () => void;
+}
 
 const Color: FC<ColorProps> = ({ style: { color, fontSize }, onClick }) => (
-	<div style={{ color, fontSize }} onClick={onClick}>
-		Color Div Component
-	</div>
+  <div style={{ color, fontSize }} onClick={onClick}>
+    Color Div Component
+  </div>
 );
 
 export default Color;
