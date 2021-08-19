@@ -12,7 +12,7 @@ import { all, fork, spawn } from 'redux-saga/effects';
 import auth from './auth';
 
 export default function* (): Generator {
-  console.log('Root Saga');
+  console.log('Root Saga runner');
   yield all([
     ...auth.map(watcher => spawn(watcher)),
     ...auth.map(watcher => fork(watcher)),

@@ -1,5 +1,13 @@
 image: alpine:latest
 
+variables:
+    BUILD_TYPE: release
+
 ci_test:
+    only:
+        changes:
+            - src/*
+            - package.json
     script:
+        - echo ${BUILD_TYPE}
         - exit 0
