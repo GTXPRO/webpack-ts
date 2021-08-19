@@ -2,7 +2,7 @@
 
 ### Code demo project typescript
 
-
+[![pipeline status](http://gitlab.dev.io/devopps/typescript-react/badges/master/pipeline.svg)](http://gitlab.dev.io/devopps/typescript-react/-/commits/master)
 
 <details>
 
