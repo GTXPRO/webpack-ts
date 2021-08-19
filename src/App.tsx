@@ -40,7 +40,7 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
-        TypeScript <br />
+        TypeScript for React <br />
         <img src={logo} className="App-logo" alt="logo" />
 
         {/* <Hello name="FC" age={100} /> <br />
