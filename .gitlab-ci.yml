@@ -1,10 +1,10 @@
 # image: alpine:latest
+image: node:14.17-alpine
 
 variables:
     BUILD_TYPE: release
 
 ci_test:
-    image: node:14.17-alpine
     only:
         changes:
             - src/**/*
