@@ -19,6 +19,8 @@ ci_test:
     script:
         - echo ${BUILD_TYPE}
         - yarn build:prod
+    allow_failure: false
+    when: manual
     artifacts:
         paths:
             - ./dist
