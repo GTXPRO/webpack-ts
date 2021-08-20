@@ -19,3 +19,7 @@ ci_test:
     script:
         - echo ${BUILD_TYPE}
         - yarn build:prod
+    artifacts:
+        paths:
+            - ./dist
+        expire_in: 1 day
