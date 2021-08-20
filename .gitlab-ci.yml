@@ -1,14 +1,21 @@
-image: alpine:latest
+# image: alpine:latest
 
 variables:
     BUILD_TYPE: release
 
 ci_test:
+    image: node:14.17-alpine
     only:
         changes:
             - src/**/*
             - package.json
             - webpack.*
+    cache:
+        key: npm-cache
+        paths: [ .npm ]
+    before_script:
+        - npm config set cache .npm
+        - npm install
     script:
         - echo ${BUILD_TYPE}
-        - exit 0
+        - npm run build:prod
