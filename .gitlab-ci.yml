@@ -11,11 +11,11 @@ ci_test:
             - package.json
             - webpack.*
     cache:
-        key: npm-cache
-        paths: [ .npm ]
+        key: yarn-cache
+        paths: [ .yarn ]
     before_script:
-        - npm config set cache .npm
-        - npm install
+        - yarn config set cache-folder .yarn
+        - yarn install
     script:
         - echo ${BUILD_TYPE}
-        - npm run build:prod
+        - yarn build:prod
