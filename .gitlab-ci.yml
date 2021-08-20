@@ -16,6 +16,8 @@ ci_test:
     before_script:
         - yarn config set cache-folder .yarn
         - yarn install
+        - ls -lsa
+        - pwd
     script:
         - echo ${BUILD_TYPE}
         - yarn build:prod

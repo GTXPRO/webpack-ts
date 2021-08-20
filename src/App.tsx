@@ -34,7 +34,7 @@ interface Lengthwise {
 function App(): JSX.Element {
   const showImg = useAppSelector(selectShowImg);
   const isBool = (): Lengthwise => {
-    return 'React';
+    return 'ReactJS';
   };
 
   return (
