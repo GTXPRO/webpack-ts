@@ -20,6 +20,7 @@ ci_test:
         - pwd
     script:
         - echo ${BUILD_TYPE}
+        - yarn test
         - yarn build:prod
     allow_failure: false
     when: manual

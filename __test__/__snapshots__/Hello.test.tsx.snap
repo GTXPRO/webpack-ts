@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Component Hello By Text Snapshot: "Hello" contains correct text 1`] = `
+<DocumentFragment>
+  <div>
+    Name: Hello 
+    <br />
+    Age: 11
+  </div>
+</DocumentFragment>
+`;
