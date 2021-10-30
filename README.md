@@ -7,6 +7,8 @@
 - webpack 5
 - babel
 
+# Update lib 30/10/2021
+
 ### Code demo project typescript
 
 [![pipeline status](http://gitlab.dev.io/devopps/typescript-react/badges/master/pipeline.svg)](http://gitlab.dev.io/devopps/typescript-react/-/commits/master)
