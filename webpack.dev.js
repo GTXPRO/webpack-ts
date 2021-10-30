@@ -47,16 +47,27 @@ module.exports = merge(common, {
 	},
 	devServer: {
 		historyApiFallback: true,
-		contentBase: '/',
+		// static: '/',
 		open: true,
 		compress: true,
 		hot: true,
 		port: 3000,
-		inline: true,
-		// host: 'example.com',
+		allowedHosts: 'all',
+		client: {
+			logging: 'info',
+			progress: true,
+			reconnect: true,
+		},
+		// http2: true,
+		headers: {
+			'X-Custom-Foo': 'bar-custom',
+		},
+		// host: 'example.com',\
+		// https: true,
 		// https: {
 		// 	key: fs.readFileSync('key file'),
-		// 	cert: fs.readFileSync('crt file')
+		// 	cert: fs.readFileSync('crt file'),
+		// 	ca: fs.readFileSync('ca file'),
 		// },
 	},
 });

@@ -1,4 +1,11 @@
-# Project Example Typescript
+# Project Example Typescript for webpack 5
+
+- react
+- redux toolkit
+- redux saga
+- typescript
+- webpack 5
+- babel
 
 ### Code demo project typescript
 
@@ -9,10 +16,10 @@
 <summary><b>:zap: Chi tiết bản câp nhật 5.0.27</b> :zap:</summary>
 
 #### :rocket: New Feature
-- :new: 
+- :new:
 
 #### :bug: Bug Fix
-- :beetle: 
+- :beetle:
 #### :nail_care: Enhancement
 
 #### :memo: Documentation
