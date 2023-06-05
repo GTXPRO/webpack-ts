@@ -7,7 +7,7 @@
 		"prettier"
 	],
 	"plugins": [
-		"@typescript-eslint", "react"
+		"@typescript-eslint", "react", "jest"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {

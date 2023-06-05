@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const fs = require('fs');
 
 const gzipSize = require('gzip-size').sync;
-const filesize = require('filesize');
+const { filesize } = require('filesize');
 const recursive = require('recursive-readdir');
 const stripAnsi = require('strip-ansi');
 

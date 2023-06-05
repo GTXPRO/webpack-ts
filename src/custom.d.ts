@@ -1,4 +1,4 @@
-import "@testing-library/jest-dom/extend-expect";
+import '@testing-library/jest-dom/extend-expect';
 
 declare module '*.svg' {
   const content: any;

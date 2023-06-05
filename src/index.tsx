@@ -7,9 +7,7 @@
  * Change Log: <press Ctrl + alt + c write changelog>
  */
 
-import 'font-awesome/css/font-awesome.min.css';
-import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 
 // component
@@ -18,10 +16,15 @@ import App from './App';
 // store
 import { store } from './Store/index';
 
+import 'font-awesome/css/font-awesome.min.css';
+
 const Main = () => (
   <Provider store={store}>
     <App />
   </Provider>
 );
 
-render(<Main />, document.getElementById('root'));
+const rootElement = document.getElementById('root') as HTMLElement;
+const root = createRoot(rootElement);
+
+root.render(<Main />);

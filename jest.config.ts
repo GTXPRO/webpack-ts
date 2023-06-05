@@ -8,23 +8,14 @@ const config: Config.InitialOptions = {
   },
   verbose: true,
   transform: {
-    '\\.[jt]sx?$': 'ts-jest',
+    '\\.[jt]sx?$': ['ts-jest', { isolatedModules: true }],
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/__mocks__/assetsTransformer.ts'
   },
   moduleFileExtensions: ['ts', 'tsx', 'js'],
   testEnvironment: 'jsdom',
-  transformIgnorePatterns: [
-    'node_modules/(?!aggregate-error|clean-stack|escape-string-regexp|indent-string|p-map)'
-  ],
+  transformIgnorePatterns: ['node_modules/(?!aggregate-error|clean-stack|escape-string-regexp|indent-string|p-map)'],
   preset: 'ts-jest',
-  globals: {
-    window: {},
-    document: {},
-    'ts-jest': {
-      isolatedModules: true
-    }
-  },
 };
 
 export default config;
